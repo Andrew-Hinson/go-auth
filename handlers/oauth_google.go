@@ -27,7 +27,7 @@ var googleOauthConfig = &oauth2.Config{
 
 const oauthGoogleUrlAPI = "https://www.googleapis.com/oauth2/v2/userinfo?access_token="
 
-func oathGoogleLogin(w http.ResponseWriter, r *http.Request) {
+func oauthGoogleLogin(w http.ResponseWriter, r *http.Request) {
 
 	oauthState := generateStateOauthCookie(w)
 	u := googleOauthConfig.AuthCodeURL(oauthState)
